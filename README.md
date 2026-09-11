@@ -1,55 +1,93 @@
-# Leviathan API Docs
+<div align="center">
 
-Public API reference and developer documentation for supported Leviathan platform interfaces.
+<img width="100%" src="assets/readme-hero.svg" alt="Leviathan API Docs">
 
-## Navigation
+<br>
 
-See the [public guide](GUIDE.md) for availability, usage boundaries, and topic-by-topic documentation. Read [SECURITY.md](SECURITY.md) before reporting a security issue.
+<img src="https://img.shields.io/badge/type-public%20API%20reference-06131d?style=flat-square" alt="Public API reference">
+<img src="https://img.shields.io/badge/status-active%20development-06131d?style=flat-square" alt="Active development">
+<img src="https://img.shields.io/badge/examples-placeholders%20only-06131d?style=flat-square" alt="Placeholder examples">
 
-- [Authentication model](GUIDE.md#authentication-model)
-- [Endpoint conventions](GUIDE.md#endpoint-conventions)
-- [Versioning](GUIDE.md#versioning)
-- [Rate limiting](GUIDE.md#rate-limiting)
-- [Errors](GUIDE.md#errors)
-- [Webhooks](GUIDE.md#webhooks)
-- [SDK usage](GUIDE.md#sdk-usage)
-- [Integrations](GUIDE.md#integrations)
-- [Security](GUIDE.md#security)
+**Public interface contracts for supported Leviathan platform integrations.**
+
+[Guide](GUIDE.md) · [SDK](https://github.com/Lapinite/Leviathan-SDK) · [Examples](https://github.com/Lapinite/Leviathan-Examples) · [Integrations](https://github.com/Lapinite/Leviathan-Integrations) · [Security](SECURITY.md)
+
+</div>
+
+## API documentation model
+
+<table width="100%">
+<tr>
+<td width="33%" valign="top"><strong>Request Contract</strong><br><sub>Authentication · endpoints · parameters · pagination · versioning</sub></td>
+<td width="33%" valign="top"><strong>Response Contract</strong><br><sub>Models · status codes · errors · rate limits · compatibility</sub></td>
+<td width="33%" valign="top"><strong>Event Contract</strong><br><sub>Webhooks · event payloads · verification · lifecycle behavior</sub></td>
+</tr>
+</table>
 
 ## Scope
 
-This repository is intended to document public interfaces such as:
+This repository is intended to document interfaces that are intentionally supported for public use, including:
 
-- Authentication requirements for public integrations
-- Public endpoint behavior
-- Request and response formats
-- Error handling
-- Pagination
-- Rate-limit behavior
-- Webhooks and event payloads
-- Versioning and compatibility
+- authentication requirements for public integrations
+- endpoint behavior
+- request and response formats
+- error handling
+- pagination
+- rate-limit behavior
+- webhooks and event payloads
+- versioning and compatibility
 - SDK usage
-- Integration examples
+- integration examples
 
-Only interfaces intentionally released for public use should be documented as available.
+Only interfaces intentionally released for public use should be represented as available.
 
-## Development status
+## Suggested reading order
 
-The Leviathan platform is under active development. Planned interfaces should be clearly labeled as planned and must not be presented as live production endpoints before they are actually available.
+1. [Authentication model](GUIDE.md#authentication-model)
+2. [Endpoint conventions](GUIDE.md#endpoint-conventions)
+3. [Versioning](GUIDE.md#versioning)
+4. [Rate limiting](GUIDE.md#rate-limiting)
+5. [Errors](GUIDE.md#errors)
+6. [Webhooks](GUIDE.md#webhooks)
+7. [SDK usage](GUIDE.md#sdk-usage)
+8. [Integrations](GUIDE.md#integrations)
+9. [Security](GUIDE.md#security)
 
-## Security rules for examples
+## Interface lifecycle
 
-Documentation and examples must use placeholder identifiers and placeholder credentials. Never commit or publish real access tokens, refresh tokens, client secrets, private keys, webhook credentials, database credentials, private endpoints, or administrative identifiers.
+```text
+Planned
+  ↓
+Documented for development
+  ↓
+Validated
+  ↓
+Intentionally published
+  ↓
+Versioned / maintained
+```
 
-Public client identifiers may not be confidential credentials, but identifiers that are not required by developers should still be omitted.
+Planned or development-stage interfaces must not be described as live production endpoints before they are actually available.
+
+## Security rules for documentation
+
+Examples must use placeholder identifiers and placeholder credentials. Never publish real access tokens, refresh tokens, client secrets, private keys, webhook credentials, bot tokens, database credentials, private endpoints, recovery material, personal information, or administrative identifiers.
+
+Public client identifiers may not be confidential credentials, but identifiers that developers do not need should still be omitted.
 
 ## Related repositories
 
-- [Leviathan Docs](https://github.com/Lapinite/Leviathan-Docs)
-- [Leviathan SDK](https://github.com/Lapinite/Leviathan-SDK)
-- [Leviathan Examples](https://github.com/Lapinite/Leviathan-Examples)
-- [Leviathan Integrations](https://github.com/Lapinite/Leviathan-Integrations)
-- [Leviathan Launcher](https://github.com/Lapinite/Leviathan-Launcher)
+| Repository | Role |
+| --- | --- |
+| [Leviathan Docs](https://github.com/Lapinite/Leviathan-Docs) | Ecosystem documentation |
+| [Leviathan SDK](https://github.com/Lapinite/Leviathan-SDK) | Developer interfaces and helpers |
+| [Leviathan Examples](https://github.com/Lapinite/Leviathan-Examples) | Safe implementation patterns |
+| [Leviathan Integrations](https://github.com/Lapinite/Leviathan-Integrations) | Public integration patterns |
+| [Leviathan Launcher](https://github.com/Lapinite/Leviathan-Launcher) | Public launcher project information |
+
+## Development status
+
+The Leviathan platform is under active development. API documentation will evolve as interfaces stabilize, validation completes, and public contracts are intentionally introduced.
 
 ## Minecraft and Microsoft notice
 
