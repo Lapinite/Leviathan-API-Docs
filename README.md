@@ -14,6 +14,14 @@
 
 </div>
 
+## Interface lifecycle
+
+<p align="center">
+  <img width="100%" src="assets/api-lifecycle.svg" alt="Animated Leviathan API interface lifecycle">
+</p>
+
+Only interfaces intentionally released for public use should be represented as available. Planned and development-stage contracts may change before validation and publication.
+
 ## API documentation model
 
 <table width="100%">
@@ -39,8 +47,6 @@ This repository is intended to document interfaces that are intentionally suppor
 - SDK usage
 - integration examples
 
-Only interfaces intentionally released for public use should be represented as available.
-
 ## Suggested reading order
 
 1. [Authentication model](GUIDE.md#authentication-model)
@@ -53,21 +59,11 @@ Only interfaces intentionally released for public use should be represented as a
 8. [Integrations](GUIDE.md#integrations)
 9. [Security](GUIDE.md#security)
 
-## Interface lifecycle
+## Identity and third-party services
 
-```text
-Planned
-  ↓
-Documented for development
-  ↓
-Validated
-  ↓
-Intentionally published
-  ↓
-Versioned / maintained
-```
+Public API documentation may reference high-level Microsoft, Xbox Live, XSTS, Minecraft Services, Mojang/Minecraft platform and Discord boundaries where they materially affect supported behavior. These are external services, not Leviathan-owned infrastructure.
 
-Planned or development-stage interfaces must not be described as live production endpoints before they are actually available.
+Leviathan should document its own account mapping, session/permission model, product state and supported public integration behavior without publishing raw credentials, private topology, internal administrative interfaces or proprietary implementation details.
 
 ## Security rules for documentation
 
